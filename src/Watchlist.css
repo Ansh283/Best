@@ -1,0 +1,92 @@
+/* Watchlist Container */
+.watchlist-container {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(to bottom, #0a1f44, #081229); /* Dark Blue Sky Theme */
+  min-height: 100vh;
+  color: white;
+}
+
+/* Search Bar Styling */
+.watchlist-search {
+  width: 60%;
+  max-width: 400px;
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #2a4d9e; /* Light Blue Border */
+  border-radius: 8px;
+  outline: none;
+  background-color: #0d1b3f;
+  color: white;
+  margin-bottom: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.watchlist-search:focus {
+  border-color: #508ef2;
+  box-shadow: 0px 0px 8px rgba(80, 142, 242, 0.7);
+}
+
+/* Grid for Movie Cards */
+.watchlist-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  padding: 10px;
+}
+
+/* Individual Movie Card */
+.watchlist-card {
+  background: linear-gradient(to bottom, #10244e, #081a38);
+  padding: 14px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border: 1px solid #294a91;
+}
+
+.watchlist-card:hover {
+  transform: scale(1.07);
+  box-shadow: 0px 4px 15px rgba(80, 142, 242, 0.4);
+}
+
+/* Movie Poster */
+.watchlist-card img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.watchlist-card:hover img {
+  transform: scale(1.03);
+}
+
+/* Movie Title */
+.watchlist-card h2 {
+  font-size: 16px;
+  margin-top: 10px;
+  color: #6db2ff;
+  transition: color 0.3s ease-in-out;
+}
+
+.watchlist-card:hover h2 {
+  color: #9cc9ff;
+}
+
+/* No Results Found */
+.no-results {
+  font-size: 18px;
+  color: #a0a0a0;
+  margin-top: 20px;
+}
+.remove-btn {
+  text-decoration: none;
+  font-size: 16px;
+  background-color: #e81212;
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: white;
+  transition: background 0.3s ease-in-out;
+  cursor: pointer;
+}

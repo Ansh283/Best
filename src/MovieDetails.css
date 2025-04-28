@@ -1,0 +1,193 @@
+/* Movie Details Page Container */
+.details-container {
+    padding: 20px;
+    background: linear-gradient(to bottom, #0a1f44, #081229); /* Dark Blue Sky Theme */
+    min-height: 100vh;
+    color: white;
+    text-align: center;
+  }
+  
+  /* Buttons Section */
+  .detailsButtons {
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto 20px;
+  }
+  
+  .back-button {
+    text-decoration: none;
+    font-size: 16px;
+    background-color: #2a4d9e;
+    padding: 10px 15px;
+    border-radius: 8px;
+    color: white;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .back-button:hover {
+    background-color: #508ef2;
+  }
+  
+  .saveToWatchlist {
+    font-size: 16px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #ffcc00;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .saveToWatchlist:hover {
+    background-color: #ffdd44;
+  }
+  
+  /* Details Content */
+  .details-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 900px;
+    margin: auto;
+    gap: 20px;
+  }
+  
+  .details-image {
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(80, 142, 242, 0.3);
+  }
+  
+  .details-info {
+    text-align: left;
+    max-width: 600px;
+  }
+  
+  .details-info h1 {
+    font-size: 24px;
+    color: #6db2ff;
+  }
+  
+  .details-info p {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+  
+  .details-info strong {
+    color: #ffcc00;
+  }
+  
+  /* Streaming Platforms */
+  .watch-providers {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .provider {
+    text-align: center;
+  }
+  
+  .provider img {
+    width: 50px;
+    border-radius: 5px;
+  }
+  
+  /* Add Review Section */
+  .add-review {
+    background: linear-gradient(to bottom, #10244e, #081a38);
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 600px;
+    margin: 30px auto;
+    text-align: center;
+    border: 1px solid #294a91;
+  }
+  
+  .add-review h3 {
+    color: #9cc9ff;
+  }
+  
+  .add-review input,
+  .add-review textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: 2px solid #294a91;
+    background-color: #0d1b3f;
+    color: white;
+    font-size: 16px;
+  }
+  
+  .add-review textarea {
+    height: 80px;
+    resize: none;
+  }
+  
+  .add-review button {
+    background-color: #ffcc00;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .add-review button:hover {
+    background-color: #ffdd44;
+  }
+  
+  /* Reviews Section */
+  .reviews-section {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background: linear-gradient(to bottom, #10244e, #081a38);
+    border-radius: 12px;
+    border: 1px solid #294a91;
+  }
+  
+  .reviews-section h3 {
+    color: #9cc9ff;
+  }
+  
+  .review {
+    background-color: #081a38;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+    text-align: left;
+  }
+  
+  .review p {
+    margin: 5px 0;
+  }
+  
+  .review strong {
+    color: #ffcc00;
+  }
+  
+  .review button {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .review button:hover {
+    background-color: #c9302c;
+  }
+  

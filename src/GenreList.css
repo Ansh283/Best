@@ -1,0 +1,35 @@
+/* GenreList.css */
+.genre-list-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #121212;
+    min-height: 100vh;
+    color: white;
+  }
+  
+  .genre-list-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .genre-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .genre-buttons a {
+    padding: 10px 20px;
+    background-color: #1f1f1f;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .genre-buttons a:hover {
+    background-color: #ff3c3c;
+  }
+  

@@ -1,0 +1,256 @@
+
+
+  .detailsButtons{
+    justify-content: center;
+    justify-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 23px;
+  }
+
+  /* Movie Details Page */
+.details-container {
+  padding: 20px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.back-button {
+  text-decoration: none;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.saveToWatchlist {
+  text-decoration: none;
+  text-align: center;
+  background-color: #199e3f;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.details-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 800px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.details-image {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+}
+
+.details-info {
+  max-width: 400px;
+  text-align: left;
+}
+
+.details-info h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+.details-info p {
+  font-size: 16px;
+  color: #555;
+  margin: 10px 0;
+}
+
+.movie-link {
+  text-decoration: none; /* Removes underline */
+  color: inherit; /* Ensures it takes the default text color */
+}
+
+.genres-container, .movies-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.genres-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.genre-item {
+  margin: 10px;
+  padding: 10px 15px;
+  background: #ff4757;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.movies-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movie-card {
+  margin: 10px;
+  text-align: center;
+}
+
+.movie-card img {
+  width: 150px;
+  border-radius: 10px;
+}
+/* Watch Providers Section */
+.watch-providers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.provider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1f1f1f;
+  padding: 10px;
+  border-radius: 8px;
+  transition: transform 0.2s ease-in-out, background 0.3s ease-in-out;
+}
+
+.provider:hover {
+  transform: scale(1.05);
+  background-color: #ff3c3c;
+}
+
+.provider img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+.provider p {
+  font-size: 14px;
+  color: white;
+  margin-top: 5px;
+  text-align: center;
+}
+/* Add Review Section */
+.add-review {
+  background-color: #1f1f1f;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.add-review h3 {
+  color: white;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.add-review form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.add-review input,
+.add-review textarea {
+  width: 80%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 14px;
+}
+
+.add-review textarea {
+  height: 100px;
+  resize: none;
+}
+
+.add-review button {
+  background-color: #ff3c3c;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.add-review button:hover {
+  background-color: #d32f2f;
+}
+/* Reviews Section */
+.reviews-section {
+  background-color: #1f1f1f;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.reviews-section h3 {
+  color: white;
+  font-size: 22px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.review {
+  background-color: #2a2a2a;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  color: white;
+  transition: transform 0.2s ease-in-out;
+}
+
+.review:hover {
+  transform: scale(1.02);
+}
+
+.review p {
+  margin: 5px 0;
+}
+
+.review strong {
+  color: #ff3c3c;
+}
+
+.review button {
+  background-color: transparent;
+  color: #ff3c3c;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 5px;
+  transition: color 0.3s ease-in-out;
+}
+
+.review button:hover {
+  color: #d32f2f;
+}
+
+  

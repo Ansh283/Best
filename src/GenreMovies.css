@@ -1,0 +1,48 @@
+/* GenreMovies.css */
+.genre-movies-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #121212;
+    min-height: 100vh;
+    color: white;
+  }
+  
+  .genre-movies-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    justify-items: center;
+  }
+  
+  .movie-card {
+    background-color: #1f1f1f;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s ease-in-out, background 0.3s ease-in-out;
+  }
+  
+  .movie-card:hover {
+    transform: scale(1.05);
+    background-color: #ff3c3c;
+  }
+  
+  .movie-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+  
+  .movie-card p {
+    padding: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .title{
+    color:aqua;
+  }
