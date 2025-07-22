@@ -16,16 +16,23 @@ function Navbar({ setSearchQuery }) {
   };
 
   return (
+    
     <nav className="navbar">
-      <h2 className="logo">MovieNerds</h2>
-      <input
-          type="text"
-          placeholder="Explore !"
-          onChange={handleSearch}
-          className="search-bar"
-        />
+      <div className="nav-container">
+        <div className="logo-gif">
+          <img height={58} width={110} src="/movie-projector-film-projector.gif"></img>
+      <h2 className="logo">CINEMAAN</h2>
+      </div>
+      <div></div>
+      
       <ul className="nav-links">
        
+       <li><input
+          type="text"
+          placeholder="🔍"
+          onChange={handleSearch}
+          className="search-bar"
+        /></li>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/watchlist">Watchlist</Link></li>
         <li><Link to="/genres">Genres</Link></li> 
@@ -39,6 +46,7 @@ function Navbar({ setSearchQuery }) {
           </>
         )}
       </ul>
+      </div>
     </nav>
   );
 }

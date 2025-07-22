@@ -1,37 +1,56 @@
 /* Navbar Container */
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 15px 20px;
   background: linear-gradient(to right, #0a1f44, #081229); /* Dark Blue Sky Theme */
   color: white;
   box-shadow: 0px 4px 10px rgba(80, 142, 242, 0.3);
+  height: 48px;
+
+ 
+}
+
+.nav-container{
+  display: flex;
+  width: 1063px;
+  justify-content: space-between ;
+ 
+
+  margin: auto;
 }
 
 /* Logo */
 .logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #f8be03; /* Light Blue Accent */
+  font-size: 28px;
+  font-weight: bolder;
+  color: #f8be03;
   transition: color 0.3s ease-in-out;
+ 
 }
 
 .logo:hover {
   color: #9cc9ff;
 }
 
+.logo-gif{
+  display: flex;
+  gap: 3px;
+}
+
 /* Navigation Links */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 15px;
+  gap: 35px;
+  width: 674px;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: white;
-  font-size: 18px;
+  color: #f8be03;;
+  font-size: 24px;
   transition: color 0.3s ease-in-out;
 }
 
@@ -41,15 +60,16 @@
 
 /* Search Bar */
 .search-bar {
-  padding: 8px 12px;
+  padding: 6px 16px;
   border-radius: 20px;
   border: 2px solid #508ef2; /* Light Blue Border */
   background-color: transparent;
   color: white;
   outline: none;
   font-size: 16px;
-  width: 40%;
+  width: 78%;
   transition: all 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
 }
 
 .search-bar::placeholder {
@@ -67,4 +87,60 @@
   background-color: #0d1a38;
   color: white;
   cursor: pointer;
+}
+
+
+ @media screen and (max-width: 480px) {
+  body {
+    background-color: lightgreen;
+    .search-bar {
+  /* padding: 4px 3px; */
+  border-radius: 10px;
+  border: 2px solid #508ef2; /* Light Blue Border */
+  background-color: transparent;
+  color: white;
+  outline: none;
+  font-size: 12px;
+  width: 100%;
+  transition: all 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  transition: color 0.3s ease-in-out;
+}
+
+.logo {
+  font-size: 14px;
+  padding: 0px 8px;
+  font-weight: bold;
+  color: #f8be03; /* Light Blue Accent */
+  transition: color 0.3s ease-in-out;
+}
+
+
+.search-bar::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: small;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 9px;
+}
+
+.logout-btn {
+  color: rgba(26, 20, 20, 0.7);
+  background-color: #0d1a38;
+  color: white;
+  cursor: pointer;
+  size: 6px;
+}
+
+
+
+  }
 }
