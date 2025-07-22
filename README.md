@@ -76,10 +76,10 @@ Create a `.env` file inside the **backend** folder:
 
 ```
 PORT=5000
-MONGO_URI=mongodb://127.0.0.1:27017/moviedb
-JWT_SECRET=6dm,Bk+8YX7AXXp0ntKJ
+MONGO_URI=your_mongo_uri_here
+JWT_SECRET=your_jwt_secret_here
 JWT_EXPIRES_IN=7d
-PORT=5000
+TMDB_API_KEY=your_tmdb_api_key_here
 ```
 
 ---
