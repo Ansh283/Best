@@ -1,6 +1,6 @@
 /* Register Page Container */
 .register-container {
-    background: linear-gradient(to bottom, #0a1f44, #081229); /* Dark Blue Theme */
+      background-color: #121212; /* Dark Blue Theme */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -20,7 +20,7 @@
   
   /* Register Form */
   .register-form {
-    background: linear-gradient(to bottom, #10244e, #081a38);
+      background-color: #363333;
     padding: 25px;
     border-radius: 12px;
     box-shadow: 0px 4px 10px rgba(80, 142, 242, 0.3);
@@ -31,7 +31,7 @@
   
   /* Input Fields */
   .register-input {
-    width: 100%;
+    width: 90%;
     padding: 12px;
     margin-bottom: 15px;
     font-size: 16px;

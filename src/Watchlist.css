@@ -2,7 +2,7 @@
 .watchlist-container {
   text-align: center;
   padding: 20px;
-  background: linear-gradient(to bottom, #0a1f44, #081229); /* Dark Blue Sky Theme */
+  background: linear-gradient(135deg, #121212, #1E1E1E);
   min-height: 100vh;
   color: white;
 }
@@ -13,17 +13,17 @@
   max-width: 400px;
   padding: 12px;
   font-size: 16px;
-  border: 2px solid #2a4d9e; /* Light Blue Border */
+  border: 2px solid #dbc824; /* Light Blue Border */
   border-radius: 8px;
   outline: none;
-  background-color: #0d1b3f;
+  background-color: #2d2f34;
   color: white;
   margin-bottom: 20px;
   transition: all 0.3s ease-in-out;
 }
 
 .watchlist-search:focus {
-  border-color: #508ef2;
+  border-color: #eee845;
   box-shadow: 0px 0px 8px rgba(80, 142, 242, 0.7);
 }
 

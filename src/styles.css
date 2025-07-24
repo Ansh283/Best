@@ -1,3 +1,11 @@
+/* Reset default margin and set background */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #121212; /* Match your main dark background */
+  color: #FFFFFF; /* Optional: sets default text color */
+  box-sizing: border-box;
+}
 
 
   .detailsButtons{
@@ -11,7 +19,7 @@
   /* Movie Details Page */
 .details-container {
   padding: 20px;
-  background-color: #f8f9fa;
+  /* background-color: #f8f9fa; */
   min-height: 100vh;
   text-align: center;
 }

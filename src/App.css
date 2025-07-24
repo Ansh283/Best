@@ -1,4 +1,10 @@
-@import "tailwindcss";
-body {
+
+
+
+html, body {
   margin: 0;
+  padding: 0;
+  background-color: #121212; /* Match your main theme */
+  color: #FFFFFF;
+  box-sizing: border-box;
 }

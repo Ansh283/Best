@@ -3,13 +3,17 @@ import { Link } from "react-router-dom";
 import "./Home.css";
 
 const API_KEY = "3010af69085e10c657c5e302d82c06b8";
-const URL = ``
 const TRENDING_URL = `https://api.themoviedb.org/3/trending/movie/day?api_key=${API_KEY}`;
 const SEARCH_URL = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=`;
 
-function Home({ searchQuery }) {
+function Home({ setSearchQuery, searchQuery }) {
   const [movies, setMovies] = useState([]);
-  
+
+  // ✅ Use the prop version only!
+  const handleSearch = (e) => {
+    setSearchQuery(e.target.value);
+  };
+
   useEffect(() => {
     const fetchMovies = async () => {
       const url = searchQuery ? `${SEARCH_URL}${searchQuery}` : TRENDING_URL;
@@ -26,6 +30,15 @@ function Home({ searchQuery }) {
 
   return (
     <div className="movie-container">
+      <div className="search-container">
+        <input
+          type="text"
+          placeholder="🔍"
+          onChange={handleSearch}
+          value={searchQuery}  // ✅ add value binding!
+          className="search-bar"
+        />
+      </div>
       <h1 className="movie-title">{searchQuery ? "Search Results" : "Trending Movies"}</h1>
       <div className="movie-grid">
         {movies.length === 0 ? (
@@ -50,3 +63,4 @@ function Home({ searchQuery }) {
 }
 
 export default Home;
+

@@ -30,6 +30,8 @@
   }
   
   .genre-buttons a:hover {
-    background-color: #ff3c3c;
+    background-color: #e8d50a;
+    color: black;
+    font: bold;
   }
   

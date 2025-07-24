@@ -14,9 +14,9 @@ function App() {
 
   return (
     <>
-      <Navbar setSearchQuery={setSearchQuery} />
+      <Navbar />
       <Routes>
-        <Route path="/" element={<Home searchQuery={searchQuery} />} />
+        <Route path="/" element={<Home setSearchQuery={setSearchQuery}  searchQuery={searchQuery} />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/movie/:id" element={<MovieDetails />} />

@@ -1,22 +1,60 @@
-/* Home Page Container */
-.movie-container {
-  padding: 20px;
-  background: linear-gradient(to bottom, #0a1f44, #081229); /* Dark Blue Sky Theme */
+/* === Global === */
+html, body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #121212, #1E1E1E); /* dark cinematic fade */
+  color: #FFFFFF;
+  box-sizing: border-box;
   min-height: 100vh;
-  color: white;
-  text-align: center;
-  
 }
 
-/* Title */
+/* === Search Container === */
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.search-container .search-bar {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 2px solid #FFD700; /* golden border */
+  background-color: transparent;
+  color: #FFFFFF;
+  outline: none;
+  font-size: 16px;
+  width: 300px;
+  transition: all 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.search-container .search-bar::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.search-container .search-bar:focus {
+  background-color: #FFFFFF;
+  color: #121212;
+  border-color: #FFD700; /* gold highlight */
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
+}
+
+/* === Main Container === */
+.movie-container {
+  padding: 20px;
+  min-height: 100vh;
+  text-align: center;
+}
+
+/* === Page Title === */
 .movie-title {
   font-size: 28px;
   font-weight: bold;
-  color: #6db2ff;
-  margin-bottom: 20px;
+  color: #FFD700; /* Gold instead of red */
+  margin: 20px 0;
 }
 
-/* Movie Grid */
+/* === Movie Grid === */
 .movie-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -25,36 +63,45 @@
   margin: auto;
 }
 
-/* Movie Card */
+/* === Movie Card === */
 .movie-card {
-  background: linear-gradient(to bottom, #10244e, #081a38);
+  background-color: #1E1E1E;
   border-radius: 12px;
   padding: 10px;
   text-align: center;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border: 1px solid #333;
 }
 
 .movie-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0px 4px 10px rgba(80, 142, 242, 0.3);
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4); /* golden glow on hover */
 }
 
-/* Movie Link */
 .movie-link {
   text-decoration: none;
   color: inherit;
 }
 
-/* Movie Image */
 .movie-image {
   width: 100%;
   border-radius: 10px;
 }
 
-/* Movie Name */
 .movie-name {
   font-size: 16px;
   font-weight: bold;
-  color: #ffcc00;
+  color: #FFD700; /* Golden for titles */
   margin-top: 10px;
+}
+
+.movie-description {
+  color: #B3B3B3;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.highlight {
+  color: #FFD700; /* gold highlights for tags/badges if any */
+  font-weight: 500;
 }

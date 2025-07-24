@@ -1,75 +1,166 @@
-/* Navbar Container */
+/* === Navbar Container === */
 .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 15px 20px;
-  background: linear-gradient(to right, #0a1f44, #081229); /* Dark Blue Sky Theme */
-  color: white;
-  box-shadow: 0px 4px 10px rgba(80, 142, 242, 0.3);
-  height: 48px;
+  background: #262525; /* Dark Cinematic background */
+ box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.3); /* gold tint */
 
- 
+  flex-wrap: wrap;
+  height: 50px;
 }
 
-.nav-container{
+/* Inner Container */
+.nav-container {
+  position: absolute;
   display: flex;
-  width: 1063px;
-  justify-content: space-between ;
- 
-
-  margin: auto;
+  width: 100%;
+  max-width: 1063px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
-/* Logo */
 .logo {
+  display: inline-block;
+  font-family: 'Cinzel', serif; /* Elegant serif font */
   font-size: 28px;
   font-weight: bolder;
-  color: #f8be03;
-  transition: color 0.3s ease-in-out;
- 
+  color: #121212; /* dark text for contrast inside the badge */
+  background: linear-gradient(
+    145deg,
+    #FFD700 0%,
+    #FFC300 50%,
+    #FFD700 100%
+  ); /* gold metallic gradient */
+  padding: 6px 20px;
+  
+  border-radius: 8px;
+  border: 2px solid #fff2b0; /* subtle edge highlight */
+  box-shadow:
+    inset 0 1px 3px rgba(255, 255, 255, 0.4), /* inner shine */
+    0 4px 10px rgba(255, 215, 0, 0.5),
+    0 0 20px rgba(255, 215, 0, 0.3);
+  letter-spacing: 1px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.logo::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.4) 30%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(25deg);
+  animation: shine 2s infinite linear;
+}
+
+
+
+
+.logo-container {
+
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .logo:hover {
-  color: #9cc9ff;
+  background: #FFD700; /* brighter gold */
+  color: #121212;
+  box-shadow:
+    0 4px 12px rgba(255, 215, 0, 0.6),
+    0 0 25px rgba(255, 215, 0, 0.4);
+  transform: scale(1.05);
 }
 
-.logo-gif{
+
+.logo-gif {
+  font-size: small;
   display: flex;
-  gap: 3px;
+  align-items: center;
+  gap: 5px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 /* Navigation Links */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 35px;
-  width: 674px;
+  flex-wrap: wrap;
+  gap: 20px; /* spacing between links */
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  display: inline-block;
 }
 
 .nav-links a {
+  display: inline-block;
+  padding: 6px 14px;
+  background: linear-gradient(
+    145deg,
+    #FFD700 0%,
+    #FFC300 50%,
+    #FFD700 100%
+  ); /* gold metallic gradient */
+  color: #121212; /* dark text for contrast */
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 6px;
+  border: 1px solid #fff2b0; /* subtle border highlight */
   text-decoration: none;
-  color: #f8be03;;
-  font-size: 24px;
-  transition: color 0.3s ease-in-out;
+  box-shadow:
+    inset 0 1px 2px rgba(255, 255, 255, 0.4),
+    0 2px 6px rgba(255, 215, 0, 0.4);
+  transition: all 0.3s ease-in-out;
 }
 
 .nav-links a:hover {
-  color: #6db2ff;
+  background: linear-gradient(
+    145deg,
+    #FFC300 0%,
+    #FFD700 50%,
+    #FFC300 100%
+  );
+  transform: translateY(-2px) scale(1.05);
+  box-shadow:
+    inset 0 1px 3px rgba(255, 255, 255, 0.5),
+    0 4px 10px rgba(255, 215, 0, 0.5);
+  color: #121212;
 }
 
 /* Search Bar */
 .search-bar {
   padding: 6px 16px;
   border-radius: 20px;
-  border: 2px solid #508ef2; /* Light Blue Border */
+  border: 2px solid #E50914;
   background-color: transparent;
   color: white;
   outline: none;
   font-size: 16px;
-  width: 78%;
+  min-width: 200px;
   transition: all 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-
 }
 
 .search-bar::placeholder {
@@ -79,68 +170,147 @@
 .search-bar:focus {
   background-color: white;
   color: black;
-  border-color: #6db2ff;
-  box-shadow: 0px 0px 8px rgba(80, 142, 242, 0.7);
+  border-color: #E50914;
+  box-shadow: 0px 0px 8px rgba(229, 9, 20, 0.7);
 }
+
+/* Logout Button */
 .logout-btn {
-  color: rgba(26, 20, 20, 0.7);
-  background-color: #0d1a38;
+  padding: 8px 16px;
+  background-color: #d9b30a;
+  border: none;
+  border-radius: 20px;
   color: white;
   cursor: pointer;
-}
-
-
- @media screen and (max-width: 480px) {
-  body {
-    background-color: lightgreen;
-    .search-bar {
-  /* padding: 4px 3px; */
-  border-radius: 10px;
-  border: 2px solid #508ef2; /* Light Blue Border */
-  background-color: transparent;
-  color: white;
-  outline: none;
-  font-size: 12px;
-  width: 100%;
-  transition: all 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: white;
   font-size: 15px;
-  transition: color 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
 }
 
-.logo {
-  font-size: 14px;
-  padding: 0px 8px;
-  font-weight: bold;
-  color: #f8be03; /* Light Blue Accent */
-  transition: color 0.3s ease-in-out;
+.logout-btn:hover {
+  background-color: #e3b80f;
 }
 
-
-.search-bar::placeholder {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: small;
+/* === Hamburger Icon === */
+.hamburger {
+  display: none; /* hidden by default */
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
 }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 9px;
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #FFD700;
+  transition: all 0.3s ease-in-out;
+}
+
+.bar.open:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.bar.open:nth-child(2) {
+  opacity: 0;
+}
+
+.bar.open:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 
 .logout-btn {
-  color: rgba(26, 20, 20, 0.7);
-  background-color: #0d1a38;
+  display: inline-block;
+  padding: 6px 14px;
+  background: #E50914; /* Netflix red for destructive action */
   color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
   cursor: pointer;
-  size: 6px;
+  transition: all 0.3s ease-in-out;
+}
+
+.logout-btn:hover {
+  background:  #FFC300;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 4px 8px rgba(229, 9, 20, 0.4);
 }
 
 
+@media screen and (max-width: 900px) {
 
+  .logo-gif {
+  
+  display: none;
+ 
+}
+  
+  .hamburger {
+    display: flex;
+    z-index: 1001; /* Keep above menu */
   }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: fixed;         /* Fixed to viewport */
+    top: 0;
+    right: -250px;           /* Start hidden to the right */
+    height: 100%;
+    width: fit-content;      /* Fit content width */
+    min-width: 200px;        /* Minimum width for usability */
+    background-color: #121212;
+    padding: 80px 20px 20px 20px; /* Top space for logo/nav height */
+    transition: right 0.3s ease-in-out;
+    box-shadow: -2px 0 8px rgba(0,0,0,0.5);
+    z-index: 1000;
+  }
+
+  .nav-links.active {
+    right: 0;                /* Slide in from right */
+  }
+
+  .nav-links li {
+    text-align: left;
+    margin: 15px 0;
+  }
+
+  .nav-links a {
+    font-size: 18px;
+  }
+
+
+  .logout-btn {
+    width: 100%;
+    margin: 15px 0;
+  }
+}
+
+@media  screen and (max-width: 1037px) {
+  .logo {
+    font-size: 16px;
+    text-align: left;
+  }
+  
+  .logo-gif {
+    width: 14px;
+    height: 14px;
+  display: none;
+  align-items: center;
+  gap: 3px;
+}
+
+.hamburger {
+  position: absolute;
+    display: flex;
+    z-index: 1001; /* Keep above menu */
+    right: 12px;
+  }
+
+}
+
+@media screen and (max-width: 1086px) {
+  .logo-container{
+    padding-left: 20px;
+  }
+  
 }
