@@ -63,7 +63,7 @@ function MovieDetails() {
   const fetchReviews = async () => {
     if (!token) return;
     try {
-      const res = await axios.get(`${BACKEND_URL}/${movieId}`, {
+      const res = await axios.get(`${API_BASE_URL}/${movieId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setReviews(res.data);
@@ -127,7 +127,7 @@ function MovieDetails() {
     }
     try {
       await axios.post(
-        `${BACKEND_URL}`,
+        `${API_BASE_URL}`,
         { movieId, rating, review: reviewText },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -147,7 +147,7 @@ function MovieDetails() {
       return;
     }
     try {
-      await axios.delete(`${BACKEND_URL}/${reviewId}`, {
+      await axios.delete(`${API_BASE_URL}/${reviewId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       fetchReviews();
