@@ -21,9 +21,11 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 15px;
+  
 }
 
 .logo {
+  text-decoration: none; 
   display: inline-block;
   font-family: 'Cinzel', serif; /* Elegant serif font */
   font-size: 28px;

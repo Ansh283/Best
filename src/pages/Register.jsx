@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./register.css";
 import API_BASE_URL from "../config"; // Import base URL
+import { ToastContainer, toast } from "react-toastify";
+import { Bounce } from "react-toastify";
 
 
 const Register = () => {
@@ -29,20 +31,66 @@ const Register = () => {
       const data = await res.json();
 
       if (!res.ok) {
-        setError(data.message || "Something went wrong");
+        setError(data.message || "Registration failed");
+        toast.error(data.message || "Registration failed", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: false,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          transition: Bounce,
+        });
       } else {
-        alert("Registration successful!");
+        toast.success('Registration successful! You can now login.', {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: false,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          transition: Bounce,
+        });
         navigate("/login"); // uncomment if using routing
       }
     } catch (err) {
-      console.error("Register Error:", err);
-      setError("Internal Server Error");
+      console.error("Registration error:", err);
+      setError("An error occurred. Please try again.");
+      toast.error("An error occurred. Please try again.", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+      });
+      
     } finally {
       setLoading(false);
     }
   };
 
   return (
+    <><ToastContainer
+position="top-center"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick={false}
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="light"
+transition={Bounce}
+/>
     <div className="register-container">
       <h2 className="register-title">Register</h2>
       <form onSubmit={handleRegister} className="register-form">
@@ -76,6 +124,7 @@ const Register = () => {
       </form>
       {error && <p className="register-error">{error}</p>}
     </div>
+    </>
   );
 };
 

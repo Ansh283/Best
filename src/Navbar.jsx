@@ -17,11 +17,14 @@ function Navbar({ setSearchQuery }) {
   };
 
   return (
+    
     <nav className="navbar">
       <div className="nav-container">
         <div className="logo-container">
         
-          <h2 className="logo">MovieNerds</h2>
+         <Link to="/" className="logo">MovieNerds</Link>
+
+
           {/* <div className="search-container">
             <input
               type="text"
@@ -48,6 +51,7 @@ function Navbar({ setSearchQuery }) {
 
           {token ? (
             <button className="logout-btn" onClick={handleLogout}>Logout</button>
+            
           ) : (
             <>
               <li><Link to="/login" className="login-btn" onClick={() => setMenuOpen(false)}>Login</Link></li>

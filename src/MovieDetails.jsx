@@ -3,6 +3,9 @@ import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import API_BASE_URL from "./config";
 import "./MovieDetails.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { Bounce } from "react-toastify";
 
 const API_KEY = "3010af69085e10c657c5e302d82c06b8";
 const API_URL = "https://api.themoviedb.org/3/movie/";
@@ -10,6 +13,8 @@ const BACKEND_URL = `${API_BASE_URL}/reviews`;
 
 
 function MovieDetails() {
+   
+
   const { id: movieId } = useParams();
   const [movie, setMovie] = useState(null);
   const [reviews, setReviews] = useState([]);
@@ -92,12 +97,32 @@ function MovieDetails() {
   // Save to Watchlist with duplication check
   const saveToWatchlist = async () => {
     if (!token) {
-      alert("You must be logged in to add movies to the watchlist.");
+      toast("You must be logged in to add a movie to Watchlist!😉", {
+position: "top-center",
+autoClose: 5000,
+hideProgressBar: false,
+closeOnClick: false,
+pauseOnHover: true,
+draggable: true,
+progress: undefined,
+theme: "light",
+transition: Bounce,
+});
       return;
     }
 
     if (watchlistIds.includes(Number(movieId))) {
-      alert("This movie is already in your watchlist!");
+toast("This movie is already in your Watchlist!", {
+position: "top-right",
+autoClose: 5000,
+hideProgressBar: false,
+closeOnClick: false,
+pauseOnHover: true,
+draggable: true,
+progress: undefined,
+theme: "light",
+transition: Bounce,
+});
       return;
     }
 
@@ -107,14 +132,44 @@ function MovieDetails() {
         { movieId: movie.id, title: movie.title, poster: movie.poster_path },
         { headers: { Authorization: `Bearer ${token}` } }
       );
-      alert(res.data.message || "Movie added to Watchlist!");
+      toast(res.data.message || "Movie added to Watchlist!", {
+position: "top-right",
+autoClose: 5000,
+hideProgressBar: false,
+closeOnClick: false,
+pauseOnHover: true,
+draggable: true,
+progress: undefined,
+theme: "light",
+transition: Bounce,
+});
       setWatchlistIds((prev) => [...prev, Number(movieId)]);
     } catch (error) {
       if (error.response?.status === 409) {
-        alert("This movie is already in your watchlist!");
+        toast("This movie is already in your Watchlist!😅", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: false,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          transition: Bounce,
+        });
       } else {
         console.error("Error adding to watchlist:", error.response?.data || error);
-        alert("Could not add movie. Please try again later.");
+        toast("Error adding to Watchlist. Please try again later.☹️", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: false,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          transition: Bounce,
+        });
       }
     }
   };
@@ -123,7 +178,17 @@ function MovieDetails() {
   const handleAddReview = async (e) => {
     e.preventDefault();
     if (!token) {
-      alert("You must be logged in to add a review.");
+      toast("You must be logged in to add a review!😉", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+      });
       return;
     }
     try {
@@ -144,7 +209,17 @@ function MovieDetails() {
   // Delete Review
   const deleteReview = async (reviewId) => {
     if (!token) {
-      alert("Please log in to delete your review!");
+      toast("You must be logged in to delete a review!😉", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+      });
       return;
     }
     try {
@@ -160,6 +235,19 @@ function MovieDetails() {
   if (!movie) return <h2>Loading...</h2>;
 
   return (
+    <><ToastContainer
+  position="top-right"
+  autoClose={5000}
+  hideProgressBar={false}
+  newestOnTop={false}
+  closeOnClick={false}
+  rtl={false}
+  pauseOnFocusLoss
+  draggable
+  pauseOnHover
+  theme="light"
+  transition={Bounce}
+  />
     <div className="details-container">
       <div className="detailsButtons">
         <Link to="/" className="back-button">
@@ -281,6 +369,7 @@ function MovieDetails() {
         )}
       </div>
     </div>
+    </>
   );
 }
 
