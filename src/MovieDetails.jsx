@@ -6,7 +6,8 @@ import "./MovieDetails.css";
 
 const API_KEY = "3010af69085e10c657c5e302d82c06b8";
 const API_URL = "https://api.themoviedb.org/3/movie/";
-const BACKEND_URL = "http://localhost:5000/api/reviews";
+const BACKEND_URL = `${API_BASE_URL}/reviews`;
+
 
 function MovieDetails() {
   const { id: movieId } = useParams();
