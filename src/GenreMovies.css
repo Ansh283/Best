@@ -24,6 +24,7 @@
     border-radius: 8px;
     overflow: hidden;
     transition: transform 0.2s ease-in-out, background 0.3s ease-in-out;
+    text-decoration: none;
   }
   
   .movie-card:hover {
@@ -44,5 +45,11 @@
     text-align: center;
   }
   .title{
-    color:aqua;
+    color:#FFD700;
+    text-decoration: none; 
   }
+
+
+.movie-card:hover .title {
+  color: #121212;
+}
