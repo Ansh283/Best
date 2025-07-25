@@ -177,6 +177,14 @@
   box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.1);
 }
 
+.add-review input, .add-review textarea {
+  width: 90%;
+}
+
+.add-review textarea{
+  width: 90%;
+}
+
 .reviews-section h3 {
   color: #FFD700;
 }
