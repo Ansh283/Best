@@ -9,6 +9,7 @@ import MovieDetails from "./MovieDetails";
 import Watchlist from "./Watchlist";
 import Navbar from "./Navbar";
 import ForgotPassword from "./pages/ForgotPassword";
+import ResetPassword from "./pages/resetPassword";
 import "./App.css"; // Import your global styles
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
         <Route path="/" element={<Home setSearchQuery={setSearchQuery}  searchQuery={searchQuery} />} />
         <Route path="/login" element={<Login />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
-
+      <Route path="/reset-password/:token" element={<ResetPassword />} /> {/* ✅ Route works now */}
         <Route path="/register" element={<Register />} />
         <Route path="/movie/:id" element={<MovieDetails />} />
         <Route path="/watchlist" element={<Watchlist />} />
