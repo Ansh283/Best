@@ -19,7 +19,7 @@ router.post("/forgot-password", async (req, res) => {
     await user.save();
 
     // 3. Construct reset URL
-   const resetUrl = `https://movienerds.vercel.app/reset-password/${resetToken}`;
+     const resetUrl = `https://movienerds.vercel.app/reset-password/${resetToken}`;
 
     // 4. Email content
     const message = `
