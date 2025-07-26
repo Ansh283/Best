@@ -14,7 +14,7 @@ const ForgotPassword = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post(`${API_BASE_URL}/api/forgot-password`, { email });
+      const res = await axios.post(`${API_BASE_URL}/forgot-password`, { email });
 
       if (res.data.success) {
         setMessage("Reset link sent to your email");
