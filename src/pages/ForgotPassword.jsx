@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import API_BASE_URL from "./config";
+import API_BASE_URL from "../config";
 import { ToastContainer, toast } from "react-toastify";
 import { Bounce } from "react-toastify";
 import './forgot-password.css';

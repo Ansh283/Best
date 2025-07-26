@@ -63,4 +63,3 @@ function Home({ setSearchQuery, searchQuery }) {
 }
 
 export default Home;
-

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
-import API_BASE_URL from "./config"; // Make sure this points to your backend base URL
+import API_BASE_URL from "../config"; // Make sure this points to your backend base URL
 import "./resetPassword.css"; // Import your styles
 
 function ResetPassword() {

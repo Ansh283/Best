@@ -1,16 +1,15 @@
 import React, { useState } from "react";
 import { Routes, Route } from "react-router-dom";
-import GenreList from "../GenreList";
-import GenreMovies from "../GenreMovies";
-import Login from "./Login";
-import Register from "./Register";
-import Home from "../Home";
+import GenreList from "./GenreList";
+import GenreMovies from "./GenreMovies";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Home from "./Home";
 import MovieDetails from "./MovieDetails";
 import Watchlist from "./Watchlist";
 import Navbar from "./Navbar";
-import ForgotPassword from "./ForgotPassword";
+import ForgotPassword from "./pages/ForgotPassword";
 import "./App.css"; // Import your global styles
-import ResetPassword from "./resetPassword"; // Import ResetPassword component
 
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -22,7 +21,6 @@ function App() {
         <Route path="/" element={<Home setSearchQuery={setSearchQuery}  searchQuery={searchQuery} />} />
         <Route path="/login" element={<Login />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
-        <Route path="/reset-password/:token" element={<ResetPassword />} />
 
         <Route path="/register" element={<Register />} />
         <Route path="/movie/:id" element={<MovieDetails />} />
