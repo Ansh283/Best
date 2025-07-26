@@ -1,7 +1,7 @@
 import { useState } from "react"; 
 import { useNavigate } from "react-router-dom";
 import "./register.css";
-import API_BASE_URL from "../config"; // Import base URL
+import API_BASE_URL from "./config"; // Import base URL
 import { ToastContainer, toast } from "react-toastify";
 import { Bounce } from "react-toastify";
 
