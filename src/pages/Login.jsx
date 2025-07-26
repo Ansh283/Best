@@ -68,8 +68,15 @@ transition={Bounce}
         <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
         <button type="submit">Login</button>
       </form>
-      <div className="f-pwd">Forget Password ?</div>
-      {error && <p className="error">{error}</p>}
+    <p>
+  <a href="/forgot-password" className="text-sm text-blue-500 hover:underline">
+    Forgot Password?
+  </a>
+</p>
+      {error && <p className="error-message">{error}</p>}
+      <p>
+        Don't have an account? <a href="/register" className="text-sm text-blue-500 hover:underline">Register</a>
+      </p>
     </div>
     </>
   );

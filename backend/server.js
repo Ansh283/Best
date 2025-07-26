@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const connectDB = require("./config/db");
+const passwordRoutes = require("./routes/password");
 
 const authRoutes = require("./routes/authRoutes");
 const watchlistRoutes = require("./routes/watchlistRoutes");
@@ -18,6 +19,9 @@ app.use(express.json());
 app.use("/api/auth", authRoutes);
 app.use("/api/watchlist", watchlistRoutes);
 app.use("/api/reviews", reviewRoutes); // Mount review routes
+
+app.use(express.json());
+app.use("/api", passwordRoutes);
 
 // Connect to MongoDB
 connectDB();

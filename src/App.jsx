@@ -8,6 +8,8 @@ import Home from "./Home";
 import MovieDetails from "./MovieDetails";
 import Watchlist from "./Watchlist";
 import Navbar from "./Navbar";
+import ForgotPassword from "./pages/ForgotPassword";
+import "./App.css"; // Import your global styles
 
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -18,6 +20,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home setSearchQuery={setSearchQuery}  searchQuery={searchQuery} />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+
         <Route path="/register" element={<Register />} />
         <Route path="/movie/:id" element={<MovieDetails />} />
         <Route path="/watchlist" element={<Watchlist />} />
