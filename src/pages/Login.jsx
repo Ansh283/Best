@@ -5,6 +5,7 @@ import API_BASE_URL from "../config"; // Import base URL
 import "./login.css"
 import { ToastContainer, toast } from "react-toastify";
 import { Bounce } from "react-toastify";
+import { Link } from "react-router-dom";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -73,10 +74,14 @@ transition={Bounce}
     Forgot Password?
   </a>
 </p>
-      {error && <p className="error-message">{error}</p>}
-      <p>
-        Don't have an account? <a href="/register" className="text-sm text-blue-500 hover:underline">Register</a>
-      </p>
+      
+{error && <p className="error-message">{error}</p>}
+<p>
+  Don't have an account?{" "}
+  <Link to="/register" className="text-sm text-blue-500 hover:underline">
+    Register
+  </Link>
+</p>
     </div>
     </>
   );
